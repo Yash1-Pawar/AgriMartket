@@ -1,0 +1,39 @@
+
+<h1 class="text-success text-center">{{loggedIn}}</h1>
+<div class="container mt-5 mb-5">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="p-3">
+        <div class="lockdiv d-flex flex-column">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuIGApZlPgeDrOxvrv2kDmkk6pmOEbUY36Ag&usqp=CAU"
+                alt="img" class="lock">
+            <div class="logintext">Login to Student's Portal</div>
+        </div>
+        <div class="form-floating mb-3 mt-3">
+            <input type="text" class="form-control" id="userId" placeholder="User Id" formControlName="userId">
+            <label for="userId">User Id</label>
+            <div *ngIf="loginForm.touched && userId.status == 'INVALID' " class="error">
+                UserID cant be blank 
+            </div>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+            <label for="password">Password</label>
+            <div *ngIf="loginForm.touched && password.status == 'INVALID' " class="error">
+                Password cant be blank
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div>
+                <button type="submit" [disabled]="loginForm.status == 'INVALID'"
+                    class="btn btn-success submit mb-1">Login</button>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <hr style="width: 45%;">
+            OR
+            <hr style="width: 45%;">
+        </div>
+        <div class="mb-2 d-flex justify-content-center align-items-center">
+            <a routerLink="/student/signin"> Sign up for Student's Portal</a>
+        </div>
+    </form>
+</div>

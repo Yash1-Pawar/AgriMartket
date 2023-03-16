@@ -1,0 +1,54 @@
+.formtable {
+    width: 30vw;
+    border-radius: 10px;
+}
+
+.experts{
+    border-radius: 10px;
+}
+
+.container{
+    background-color: rgb(175, 202, 172);
+}
+
+.form-select{
+    width: 60%;
+    margin-top: 10px;
+}
+
+#country{
+    margin-left: 10px;
+}
+
+#state{
+    margin-left: 30px;
+}
+
+#city{
+    margin-left: 38px;
+}
+
+.card-img-top{
+    width: 150px;
+    margin: auto;
+}
+
+.card:hover {
+    /* background-color: rgb(255, 84, 175); */
+    box-shadow: 0 2px 4px rgb(0 0 0 / 20%), 0 8px 16px rgb(0 0 0 / 20%);
+    /* animation: animy 0.2s ease-in-out 1; */
+}
+
+.card-body {
+    flex: unset;
+}
+
+@keyframes animy {
+    from {
+        box-shadow: 0px 0px 0px -6px #000000;
+    }
+
+    to {
+        box-shadow: 0px 0px 18px -6px #000000;
+    }
+}

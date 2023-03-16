@@ -1,0 +1,59 @@
+<div class="container mt-2 d-flex flex-wrap justify-content-evenly">
+    <div *ngFor="let i of newReleases">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img [src]="i.dp" class="img-fluid rounded-start" alt="img">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{i.name}}</h5>
+                        <p class="card-text">{{i.description}}</p>
+                        <div class="card-body d-flex justify-content-between">
+                            <button class="btn btn-success me-2">
+                                Rs. {{i.price}}
+                            </button>
+                            <button class="btn btn-danger" *ngIf="!cartItems.includes(i);else remove" (click)="addToCart(i)"><i
+                                    class="bi bi-cart-plus"> Sell</i></button>
+                            <ng-template #remove>
+                                <button class="btn btn-secondary" (click)="removeFromCart(i)"><i class="bi bi-trash3-fill">
+                                        Remove</i></button></ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button type="button" class="btn btn-info" id="checkout" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Checkout
+    <i class="bi bi-arrow-bar-right"></i>
+    <span class="badge text-bg-secondary ms-4">{{cartItems.length}}</span>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Payment</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p *ngFor="let item of cartItems; index as i">{{i+1}}: {{item.name}}</p>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button type="button" class="btn btn-warning">&#8377; {{totalPrice}}</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success ms-2">Sell Products</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

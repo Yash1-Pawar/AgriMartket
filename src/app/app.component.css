@@ -1,0 +1,25 @@
+li{
+    list-style: none;
+}
+
+.hello {
+    width: 180px;
+}
+
+footer{
+    height: 100%;
+}
+
+.footer-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0 !important;
+    padding-left: 10px !important;
+}
+
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

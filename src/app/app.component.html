@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home">AgriMart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="releases" routerLinkActive="active">NewReleases</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="categories" routerLinkActive="active">SeeAllCategories</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+            routerLinkActive="active">FarmerPortal</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="farmer/home" routerLinkActive="active">Home</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="farmer/signin" routerLinkActive="active">SignIn</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="farmer/sell" routerLinkActive="active">Sell</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="farmer/products" routerLinkActive="active">Products</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="farmer/queries" routerLinkActive="active">Queries</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="farmer/contact" routerLinkActive="active">ContactUs</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="farmer/login" routerLinkActive="active">Login</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+            routerLinkActive="active">StudentPortal</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="student/home" routerLinkActive="active">Home</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="student/signin" routerLinkActive="active">SignIn</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="student/sell" routerLinkActive="active">Sell</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="student/queries" routerLinkActive="active">Queries</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="student/login" routerLinkActive="active">Login</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="expert" routerLinkActive="active">ExpertConsultancy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="active">AboutUs</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <button type="button" class="btn btn-success m-2 hello">Welcome to AgriMart</button>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<footer class="foot bg-secondary">
+  <div class="contactUs">
+    <h2 class="ps-1">Contacts:</h2>
+    <ul class="footer-nav-list">
+      <li>Sachin: 999999999</li>
+      <li>Yash: 999999999</li>
+    </ul>
+  </div>
+  <div class="copy me-3">
+    &copy; Developed by <b>Yash Pawar</b>
+  </div>
+</footer>

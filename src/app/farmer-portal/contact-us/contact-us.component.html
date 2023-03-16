@@ -1,0 +1,20 @@
+<div class="container my-2 experts d-flex flex-wrap justify-content-evenly">
+    <div *ngFor="let expert of listOfContacts">
+        <div class="card m-2 my-4 overflow-auto bg-success" style="width: 18rem;">
+            <img src="../../assets/images/expert/person.png" class="card-img-top mt-2" alt="...">
+            
+            <div class="card-body d-flex flex-column justify-content-around">
+                <h5 class="card-title">{{expert.name}}</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem natus aut eaque facilis magni, accusamus nihil quam possimus illo consequatur ullam modi veritatis iusto cumque!
+                </p>
+                <p>
+                  Contact: {{expert.mobile}}
+                </p>
+            </div>
+            <!-- <div class="card-body d-flex justify-content-end">
+                <button class="btn btn-secondary col-2"><i class="bi bi-eye"></i></button>
+            </div> -->
+        </div>
+    </div>
+  </div>
